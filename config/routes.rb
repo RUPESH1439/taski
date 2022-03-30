@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'tasks/show'
-  get 'tasks/new'
-  get 'tasks/edit'
   get 'pages/contact'
   get "about", to: "pages#about"
   get 'pages/home'
@@ -9,7 +6,9 @@ Rails.application.routes.draw do
 
   get "blog", to: redirect('https://www.linkedin.com/in/sthrupesh/')
 
-  resources :projects
+  resources :projects do
+    resources :tasks, except: [:index], controller: 'projects/tasks'
+  end
 
   root 'pages#home'
 

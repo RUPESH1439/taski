@@ -5,6 +5,10 @@ class Task < ApplicationRecord
 
   scope :completed, -> { where(completed: true) }
 
+  scope :not_completed, -> { where(completed: false) }
+
+  mount_uploader :task_file, TaskFileUploader
+
   def mark_completed?
     self.completed == true
   end
