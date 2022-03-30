@@ -10,4 +10,8 @@ class PagesController < ApplicationController
     @title = "Welcome to home!!!"
     @projects = Project.all
   end
+
+  def error
+
+  end
 end
