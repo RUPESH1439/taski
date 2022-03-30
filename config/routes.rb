@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get "blog", to: redirect('https://www.linkedin.com/in/sthrupesh/')
 
-  resources :projects
+  resources :projects do
+    resources :tasks, except: [:index], controller: 'projects/tasks'
+  end
 
   root 'pages#home'
 
