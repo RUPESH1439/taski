@@ -7,5 +7,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @title = "Welcome to home!!!"
+    @projects = Project.all
   end
 end
