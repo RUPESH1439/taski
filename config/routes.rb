@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :projects
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'pages/contact'
+  get "about", to: "pages#about"
+  get 'pages/home'
+  get "error", to: "pages#error"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "blog", to: redirect('https://www.linkedin.com/in/sthrupesh/')
+
+  resources :projects
+
+  root 'pages#home'
+
+  get "*path", to: redirect("/error")
 end
