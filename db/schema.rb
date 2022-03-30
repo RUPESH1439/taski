@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_03_29_175542) do
-  create_table "projects", force: :cascade do |t|
+  create_table "project", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.decimal "percent_complete"
