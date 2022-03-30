@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
+  # Define relationship with task
+  has_many :tasks
+
   # Add default column values
   after_initialize :set_defaults
 
