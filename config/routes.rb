@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   get 'pages/contact'
   get "about", to: "pages#about"
   get 'pages/home'
@@ -13,5 +16,5 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get "*path", to: redirect("/error")
+  # get "*path", to: redirect("/error")
 end
