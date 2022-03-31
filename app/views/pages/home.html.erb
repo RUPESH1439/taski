@@ -1,7 +1,8 @@
-<h1>
-  <%= @title %>
-</h1>
 <div class="homepage-projects">
-  <%= render "shared/project/projects" %>
+  <div class="container">
+    <% if current_user %>
+      <%= render "shared/project/projects" %>
+    <% end %>
+  </div>
 </div>
 

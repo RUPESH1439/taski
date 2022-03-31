@@ -1,0 +1,34 @@
+<h2>Tasks</h2>
+<table class="project-table">
+  <tr class="bg-light-green">
+    <% @tasks_headers.each do |header| %>
+      <th>
+        <p class="text-header"> <%= header %></p>
+      </th>
+    <% end %>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td>
+        <p class="text-row"><%= task.title %></p>
+      </td>
+      <td>
+        <p class="text-row"><%= task.description %></p>
+      </td>
+      <td>
+        <p><%= link_to "attachment", task.task_file.to_s, target: :'_blank' %></p>
+      </td>
+      <td>
+        <p class="text-row"><%= "Yes" if task.completed %><%= "No" unless task.completed %></p>
+      </td>
+      <td>
+        <div>
+          <%= link_to "Edit", edit_project_task_path(task.id) %> |
+          <%=
+            link_to "View", project_task_path(task.id) %>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+</table>

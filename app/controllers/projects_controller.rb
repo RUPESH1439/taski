@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1 or /projects/1.json
   def show
     @tasks = @project.tasks
+    @tasks_headers = ['Title', 'Description', 'Attachment', 'Completed', 'Actions']
   end
 
   # GET /projects/new
