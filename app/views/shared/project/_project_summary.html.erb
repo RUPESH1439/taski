@@ -1,0 +1,16 @@
+<div style="display: flex; align-items: center">
+  <p class="project-title"> <%= @project.title %> <%= " | " %> </p>
+  <%= link_to 'Edit', edit_project_path(@project) %>
+
+</div>
+
+
+<div>
+  <p class="project-fields-header">Description</p>
+  <p class="project-description"><%= @project.description %></p>
+</div>
+
+<div>
+  <p class="project-fields-header">Completed: <%= @project.percent_complete %>%</p>
+</div>
+

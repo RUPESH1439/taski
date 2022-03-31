@@ -1,0 +1,24 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+    font-size: 1.11em;
+    font-weight: 700;
+    color: #1F2833;
+}
+
+.nav-item:hover {
+    color: white
+}

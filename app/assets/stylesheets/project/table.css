@@ -1,0 +1,16 @@
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.text-header {
+    font-family: "Lucida Grande", serif;
+    font-size: 1rem;
+}
+
+.text-row {
+    font-family: "Helvetica", "Arial Black", sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-left: 0.5rem;
+}
