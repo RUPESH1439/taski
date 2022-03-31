@@ -1,8 +1,31 @@
 <h2>Projects</h2>
-<ul>
+<table class="project-table">
+  <tr class="bg-light-green">
+    <% @table_headers.each do |header| %>
+      <th>
+        <p class="text-header"> <%= header %></p>
+      </th>
+    <% end %>
+  </tr>
+
   <% @projects.each do |project| %>
-    <p><strong><%= project.title %></strong></p>
-    <p><%= project.description %></p>
-    <p><%= "#{project.percent_complete} %" if project.percent_complete %></p>
+    <tr>
+      <td>
+        <p class="text-row"><%= project.title %></p>
+      </td>
+      <td>
+        <p class="text-row"><%= project.description %></p>
+      </td>
+      <td>
+        <p class="text-row"><%= "#{project.percent_complete} %" if project.percent_complete %></p>
+      </td>
+      <td>
+        <div>
+          <%= link_to "Edit", edit_project_path(project.id) %> |
+          <%=
+            link_to "View", project_url(project.id) %>
+        </div>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>

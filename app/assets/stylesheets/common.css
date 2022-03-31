@@ -1,0 +1,33 @@
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-secondary {
+    background-color: #66FCF1;
+}
+
+.bg-primary {
+    background-color: #0B0C10;
+}
+
+.text-primary {
+    color: #d9dadc
+}
+
+.text-secondary {
+    color: #1F2833;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+.bg-light-green {
+    background-color: #45A293;
+}
+
+.title {
+    font-size: 2rem;
+}

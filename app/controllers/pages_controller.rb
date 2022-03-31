@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   def home
     @title = "Welcome to home!!!"
     @projects = Project.all
+    @table_headers = ['Title', 'Description', 'Percentage Completed', "Action"]
   end
 
   def error
