@@ -1,0 +1,8 @@
+<h2>Projects</h2>
+<ul>
+  <% @projects.each do |project| %>
+    <p><strong><%= project.title %></strong></p>
+    <p><%= project.description %></p>
+    <p><%= "#{project.percent_complete} %" if project.percent_complete %></p>
+  <% end %>
+</ul>
